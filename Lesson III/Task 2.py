@@ -15,6 +15,6 @@ rez = -1
 for i in range(len(myArray)):
     if myArray[i] == search:
         count += 1
-        if count ==2:
+        if count == 2:
             rez = i
 print(rez)
