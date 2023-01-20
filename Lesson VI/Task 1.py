@@ -26,7 +26,8 @@ def SearchingNumbers(task, place):
 
 expression = '5*2+67*2+2-6/2'
 print(expression, '= ', end="")
-operations = ['*', '/', '+', '-']
+
+operations = ['/', '*', '+', '-']
 for i in range(4):
     while expression.find(operations[i]) > 0:
         operat = expression.find(operations[i])
