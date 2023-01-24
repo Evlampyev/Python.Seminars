@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b1b2c14-4d6c-4f08-a9fe-2e894f9f86e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lesson VII/ReadMe.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson VII/controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson VII/interface.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson VII/log.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson VII/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson VII/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson VII/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lesson VII/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson VIII/ReadMe.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson VIII/controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson VIII/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson VIII/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson VIII/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson VIII/user_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson VIII/view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Урок I.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Урок I.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson VI/Task 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson VI/Task 1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,37 +41,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Bad_S/Desktop/GeekBraeins/II четверть/Python. Семинары/Lesson VII",
+    "last_opened_file_path": "C:/Users/Bad_S/Desktop/GeekBraeins/II четверть/Python. Семинары/Lesson VIII",
     "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Bad_S\Desktop\GeekBraeins\II четверть\Python. Семинары\Lesson VIII" />
       <recent name="C:\Users\Bad_S\Desktop\GeekBraeins\II четверть\Python. Семинары\Lesson VII" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="Task 1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Урок I" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\Bad_S\PycharmProjects\pythonProject\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson VI" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson VI/Task 1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="Task 1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Урок I" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,19 +73,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Task 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Урок I" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Bad_S\Desktop\Python. HomeWork\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson VI" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson VIII" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson VI/Task 2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson VIII/database.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="interface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Урок I" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,11 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson VII" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson VIII" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson VII/interface.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson VIII/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="view" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="user_interface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Урок I" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -190,11 +165,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson VII" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson VIII" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson VII/view.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson VIII/user_interface.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,19 +179,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.interface" />
+      <item itemvalue="Python.database" />
+      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.user_interface" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.model" />
-      <item itemvalue="Python.view" />
-      <item itemvalue="Python.Task 1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.database" />
+        <item itemvalue="Python.user_interface" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.model" />
-        <item itemvalue="Python.view" />
-        <item itemvalue="Python.interface" />
-        <item itemvalue="Python.Task 1" />
       </list>
     </recent_temporary>
   </component>
