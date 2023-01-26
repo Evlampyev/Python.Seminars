@@ -17,9 +17,11 @@ def tearcher():
     while menu != 1 or menu != 2:
         menu = int(input("Ваш выбор: "))
         if menu == 1:
-            return tearcher()
+            tearcher()
+            break
         elif menu == 2:
-            return controller.initial()
+            controller.initial()
+            break
         else:
             print("Повторите ввод")
 
