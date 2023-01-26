@@ -1,5 +1,8 @@
-from database import academic_discipline
-from database import tearcher_work
+from database import (academic_discipline,
+                      tearcher_work,
+                      student_one_discipline,
+                      student_all_discipline,
+                      student_choose_discipline)
 import controller
 
 
@@ -26,5 +29,17 @@ def tearcher():
             print("Повторите ввод")
 
 
-def stydent():
-    return
+def student():
+    print("---УЧЕНИК---")
+    stud_name = input("Введите фамилию: ")
+    print("1. Посмостреть оценки по предмету")
+    print("2. Посмотреть все оценки")
+    student_choose = int(input('Ваш выбор: '))
+    if student_choose == 1:
+        discip = student_choose_discipline()
+        list_mark = student_one_discipline(stud_name, discip)
+    elif student_choose == 2:
+        list_mark = student_all_discipline(stud_name)
+    else:
+        controller.initial()
+    if len(list_mark) > 0: print(list_mark)

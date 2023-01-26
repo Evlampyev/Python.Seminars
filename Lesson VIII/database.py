@@ -53,3 +53,34 @@ def mark_add(discipline, student):
         i += 1
     with open(path, 'w') as file:
         file.write(new_lines)
+
+
+def student_choose_discipline():
+    for i in range(len(academic_discipline)):
+        print(f"{i + 1}. {academic_discipline[i]}")
+    return int(input("Какой предмет? "))
+
+
+def student_all_discipline(student_name):
+    lst_mark = str()
+    return lst_mark
+
+
+def student_one_discipline(student_name, discipline):
+    path = academic_discipline[discipline - 1] + '.txt'
+    try:
+        with open(path, 'r') as file:
+            lines = file.readlines()
+    except:
+        lines = ""
+    if lines == "":
+        print(f"по предмету '{academic_discipline[discipline]}' нет оценок")
+    else:
+        lst_mark = str()
+        for line in lines:
+            temp = line.split()
+            if temp[0] == student_name:
+                for i in range(1, len(temp)):
+                    lst_mark = lst_mark + temp[i] + ' '
+
+    return lst_mark

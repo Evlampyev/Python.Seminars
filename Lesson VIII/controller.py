@@ -1,17 +1,18 @@
-from user_interface import (tearcher, stydent)
+from user_interface import (tearcher, student)
 
 
 def initial():
     choose = 0
-    print("+++ ГЛАВНОЕ МЕНЮ +++")
-    print("1. Учитель")
-    print("2. Ученик")
-    print("3. Выход")
     while (True):
+        print("_____________________")
+        print("+++ ГЛАВНОЕ МЕНЮ +++")
+        print("1. Учитель")
+        print("2. Ученик")
+        print("3. Выход")
         choose = int(input("Вам куда? "))
         if choose == 1:
             tearcher()
         elif choose == 2:
-            stydent()
+            student()
         else:
             break

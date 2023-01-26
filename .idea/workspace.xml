@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4b1b2c14-4d6c-4f08-a9fe-2e894f9f86e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson VIII/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson VIII/controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson VIII/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson VIII/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lesson VIII/user_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson VIII/user_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson VIII/Информатика.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson VIII/Математика.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson VIII/Русский язык.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson VIII/Русский язык.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,9 +164,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.user_interface" />
         <item itemvalue="Python.database" />
         <item itemvalue="Python.controller" />
-        <item itemvalue="Python.user_interface" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -208,8 +208,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Lesson VIII/database.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="5" />
+          <line>70</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -222,6 +222,7 @@
         <watch expression="task[place+1:second]" language="Python" />
         <watch expression="task" />
         <watch expression="task[first]" language="Python" />
+        <watch expression="len(temp)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
