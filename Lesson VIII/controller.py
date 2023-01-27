@@ -3,7 +3,7 @@ from user_interface import (tearcher, student)
 
 def initial():
     choose = 0
-    while (True):
+    while choose != 3:
         print("_____________________")
         print("+++ ГЛАВНОЕ МЕНЮ +++")
         print("1. Учитель")

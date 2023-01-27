@@ -63,6 +63,17 @@ def student_choose_discipline():
 
 def student_all_discipline(student_name):
     lst_mark = str()
+    for i in range(len(academic_discipline)):
+        path = academic_discipline[i] + ".txt"
+        try:
+            with open(path, 'r') as file:
+                lines = file.readlines()
+            for line in lines:
+                temp = line.split()
+                if temp[0] == student_name:
+                    lst_mark = lst_mark + academic_discipline[i] + ' - - ' + line
+        except:
+            lst_mark = lst_mark + academic_discipline[i] + '- - ' + student_name + " нет оценок"
     return lst_mark
 
 
