@@ -1,35 +1,50 @@
-# token1 = "5916882745:AAHDomrnWWXirqjByn6-XiztHz9nDXolK1Q"
-from telegram import Bot
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from random import randint
+from telegram import Bot, Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 
-token1 = "5916882745:AAHDomrnWWXirqjByn6-XiztHz9nDXolK1Q"
-
-bot = Bot(token="5916882745:AAHDomrnWWXirqjByn6-XiztHz9nDXolK1Q")
-updater = Updater(token1)
+bot = Bot(token='5916882745:AAHDomrnWWXirqjByn6-XiztHz9nDXolK1Q')
+updater = Updater(token='5916882745:AAHDomrnWWXirqjByn6-XiztHz9nDXolK1Q')
 dispatcher = updater.dispatcher
 
-
-def start(update, contex):
-    contex.bot.send_message(update.effective_chat.id, "Hello")
-
-
-def rand(update, contex):
-    contex.bot.send_message(update.effective_chat.id, f'{randint(1, 100)}')
+A = 0
+B = 1
 
 
-def default(updater, contex):
-    contex.bot.send_message(updater.effective_chat.id, "Я не знаю таких команд")
+def start(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Привет\n Как твои дела?')
+    return A
 
 
-print("Server start")
+def howareyou(update, context):
+    text = update.message.text
+    if 'хор' in text.lower():
+        context.bot.send_message(update.effective_chat.id, 'Я рад, что у тебя все хорошо')
+    else:
+        context.bot.send_message(update.effective_chat.id, 'Не грусти, все будет отлично')
+    context.bot.send_message(update.effective_chat.id, 'Как погода?')
+    return B
+
+
+def weather(update, context):
+    text = update.message.text
+    context.bot.send_message(update.effective_chat.id, 'Ну ок, у меня тоже сегодня хорошая погода')
+
+    return ConversationHandler.END
+
+
+def cancel(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Прощай!!!')
+
+
 start_handler = CommandHandler('start', start)
-random_handler = CommandHandler('random', rand)
-default_handler = MessageHandler(Filters.command, default)
+howareyou_handler = MessageHandler(Filters.text, howareyou)
+weather_handler = MessageHandler(Filters.text, weather)
+cancel_handler = CommandHandler('cancel', cancel)
 
-dispatcher.add_handler(start_handler)
-dispatcher.add_handler(random_handler)
-dispatcher.add_handler(default_handler)
+conv_handler = ConversationHandler(entry_points=[start_handler],
+                                   states={A: [howareyou_handler],
+                                           B: [weather_handler]},
+                                   fallbacks=[cancel_handler])
+dispatcher.add_handler(conv_handler)
 
 updater.start_polling()
 updater.idle()
