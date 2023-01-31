@@ -1,0 +1,157 @@
+pip install python-telegram-bot==13.14 --- нужная версия
+-------------------------------------------------------------------------
+После этого нужно будет рассказать
+
+from telegram import Bot
+from telegram.ext import Updater, CommandHandler
+
+
+bot = Bot(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+updater = Updater(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+dispatcher = updater.dispatcher
+
+
+def start(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Hello')
+
+
+start_handler = CommandHandler('start', start)
+dispatcher.add_handler(start_handler)
+
+
+updater.start_polling()
+updater.idle()
+
+-------------------------------------------------------------------------
+python anywhere --- для разворачивания своего сервера
+-------------------------------------------------------------------------
+from telegram import Bot, Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from random import randint as rd
+
+
+bot = Bot(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+updater = Updater(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+dispatcher = updater.dispatcher
+
+
+def start(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Hello')
+
+
+def rand(update, context):
+    context.bot.send_message(update.effective_chat.id, f'{rd(1, 100)}')
+
+
+def voice(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Я пока таких команд не знаю :(')
+
+
+start_handler = CommandHandler('start', start)
+random_handler = CommandHandler('random', rand)
+message_handler = MessageHandler(Filters.command, voice)
+
+dispatcher.add_handler(start_handler)
+dispatcher.add_handler(random_handler)
+dispatcher.add_handler(message_handler)
+
+
+updater.start_polling()
+updater.idle() # ctrl + c
+------------------------------------------------------------------------
+Добавим реагирование на вводимые слова
+------------------------------------------------------------------------
+from telegram import Bot, Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from random import randint as rd
+
+
+bot = Bot(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+updater = Updater(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+dispatcher = updater.dispatcher
+
+
+def start(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Hello')
+
+
+def rand(update, context):
+    context.bot.send_message(update.effective_chat.id, f'{rd(1, 100)}')
+
+
+
+def voice(update, context):
+    text = update.message.text
+    if 'прив' in text.lower():
+        context.bot.send_message(update.effective_chat.id, 'И тебе привет, мой дорогой друг!')
+    else:
+        context.bot.send_message(update.effective_chat.id, 'Я тебя не понимаю :(')
+
+
+start_handler = CommandHandler('start', start)
+random_handler = CommandHandler('random', rand)
+message_handler = MessageHandler(Filters.text, voice)
+
+dispatcher.add_handler(start_handler)
+dispatcher.add_handler(random_handler)
+dispatcher.add_handler(message_handler)
+
+
+updater.start_polling()
+updater.idle() 
+--------------------------------------------------------------------------------------------
+Добавим небольшой диалог
+--------------------------------------------------------------------------------------------
+from telegram import Bot, Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
+from random import randint as rd
+
+
+bot = Bot(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+updater = Updater(token='5897211710:AAG0910uozqzP44r1OGkgyEzGf_fDBBTiQs')
+dispatcher = updater.dispatcher
+
+
+A = 0
+B = 1
+
+
+def start(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Привет\nКак твои дела?')
+    return A
+
+
+def howareyou(update, context):
+    text = update.message.text
+    if 'хор' in text.lower():
+        context.bot.send_message(update.effective_chat.id, 'Я рад, что у тебя все хорошо')
+    else:
+        context.bot.send_message(update.effective_chat.id, 'Не грусти, все будет отлично')
+    context.bot.send_message(update.effective_chat.id, 'Как погода?')
+    return B
+
+def weather(update, context):
+    text = update.message.text
+    context.bot.send_message(update.effective_chat.id, 'Ну ок, у меня тоже сегодня хорошая погода')
+
+    return ConversationHandler.END
+
+
+def cancel(update, context):
+    context.bot.send_message(update.effective_chat.id, 'Прощай!!!')
+
+
+start_handler = CommandHandler('start', start)
+howareyou_handler = MessageHandler(Filters.text, howareyou)
+weather_handler = MessageHandler(Filters.text, weather)
+cancel_handler = CommandHandler('cancel', cancel)
+# message_handler = MessageHandler(Filters.text, voice)
+conv_handler = ConversationHandler(entry_points=[start_handler],
+                                    states={A: [howareyou_handler],
+                                    B: [weather_handler]},
+                                    fallbacks=[cancel_handler])
+dispatcher.add_handler(conv_handler)
+
+updater.start_polling()
+updater.idle() 
+--------------------------------------------------------------------------------------------
